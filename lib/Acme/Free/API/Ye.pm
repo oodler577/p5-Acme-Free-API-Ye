@@ -3,7 +3,7 @@ package Acme::Free::API::Ye;
 use strict;
 use warnings;
 
-our $VERSION = 1.0;
+our $VERSION = '1.0.0';
 
 use HTTP::Tiny;
 use JSON            qw/decode_json/;
@@ -53,11 +53,24 @@ This module provides the client, "ye", that is available via C<PATH> after insta
 
   printf "%s\n", $ye->quote;
 
+=head2 C<ye> Commandline Client
+
+After installing this module, simply run the command C<ye> without any arguments, and it will print
+a random Kanye Rest quote to C<STDOUT>.
+
+  shell> ye
+  If I don't scream, if I don't say something then no one's going to say anything. 
+  shell> ye
+  Culture is the most powerful force in humanity under God
+  shell>
+
 =head1 DESCRIPTION
 
 This fun module is to demonstrate how to use L<Util::H2O::More> to make
 creating easily make API SaaS modules and clients in a clean and idiomatic
-way.
+way. These kind of APIs tracked at L<https://www.freepublicapis.com/> are
+really nice for fun and practice because they don't require dealing with
+API keys in the vast majority of cases.
 
 =head1 METHODS
 
